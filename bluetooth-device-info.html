@@ -1,0 +1,27 @@
+<script type="text/javascript">
+  RED.nodes.registerType('bluetooth-device-info',{
+    category: 'ble',
+    color: '#89898b',
+    defaults: {
+      name: {value:"database.svg"}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "bluetooth-icon.png",
+    label: function() {
+      return this.name || "bluetooth-device-info";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="bluetooth-device-info">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="bluetooth-device-info">
+    <p>Inspects the underlying system and returns information about the bluetooth radio.</p>
+    <p>To run it, send any message to this node.</p>
+</script>

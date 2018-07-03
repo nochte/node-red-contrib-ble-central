@@ -1,0 +1,30 @@
+<script type="text/javascript">
+  RED.nodes.registerType('ble-communication',{
+    category: 'ble',
+    color: '#89898b',
+    defaults: {
+      name: {value:"ble-communication"}
+    },
+    inputs:1,
+    outputs:2,
+    icon: "link-2.svg",
+    label: function() {
+      return this.name || "ble-communication";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="ble-communication">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ble-communication">
+    <p>Input: {msg (from ble-central), msg: {peripheral, operations: [{serviceUuid, characteristicUuid, operation, value]}.</p>
+    <p>Run the discover-services node to figure out the UUIDs.</p>
+    <p>Operation can be Read or write</p>
+    <p>Value must be an array or buffer of values to be written on write operations</p>
+    <p>Output: TBD</p>
+</script>

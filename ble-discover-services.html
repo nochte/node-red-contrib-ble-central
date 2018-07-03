@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  RED.nodes.registerType('ble-discover-services',{
+    category: 'ble',
+    color: '#008b84',
+    defaults: {
+      deviceIdFilter: {value: null},
+      name: {value:"ble-discover-services"}
+    },
+    inputs: 1,
+    outputs: 3,
+    icon: "terminal.svg",
+    label: function() {
+      return this.name || "ble-discover-services";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="ble-discover-services">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ble-discover-services">
+    <p>BLE Discover Services -- Given a peripheral (msg.peripheral) returned from ble-central, will yield the services and characteristics that a peripheral provide</p>
+    <p>Useful for debugging peripherals. Probably not a good idea to use in production without a really good reason.</p>
+</script>

@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('ble-central',{
+    category: 'ble',
+    color: '#008b84',
+    defaults: {
+      deviceIdFilter: {value: null},
+      name: {value:"ble-central"}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "bluetooth.svg",
+    label: function() {
+      return this.name || "ble-central";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="ble-central">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-deviceIdFilter"><i class="icon-tag"></i> Device ID Filter</label>
+        <input type="text" id="node-input-deviceIdFilter" placeholder="Device ID Filter">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ble-central">
+    <p>BLE Central -- starts an instance of noble, sets discover mode and sends all BLE events downstream</p>
+</script>
