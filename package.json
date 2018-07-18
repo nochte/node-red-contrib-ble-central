@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ble-central",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "noble library wrapper to put a node-red flow into BLE central mode",
   "main": "index.js",
   "scripts": {
